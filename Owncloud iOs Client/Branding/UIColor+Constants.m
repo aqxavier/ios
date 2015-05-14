@@ -21,11 +21,11 @@
 
 //Tint color of navigation bar
 + (UIColor*)colorOfNavigationBar{
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:1.0];
+    return [UIColor colorWithRed:156/255.0f green:43/255.0f blue:43/255.0f alpha:1.0];
 }
 //Color of background view in navigation bar, only for iOS 7 for transparency
 + (UIColor*)colorOfBackgroundNavBarImage {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:0.7];
+    return [UIColor colorWithRed:156/255.0f green:43/255.0f blue:43/255.0f alpha:1.0];
 }
 
 //Color of letters in navigation bar
@@ -40,17 +40,17 @@
 
 //Color of background in custom status bar, only for iOS 7
 + (UIColor*)colorOfBackgroundStatusBarNotification {
-    return [UIColor colorWithRed:55/255.0f green:70/255.0f blue:89/255.0f alpha:1.0];
+    return [UIColor colorWithRed:156/255.0f green:43/255.0f blue:43/255.0f alpha:1.0];
 }
 
 //Tint color of tool bar
 + (UIColor*)colorOfToolBar{
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:1.0];
+    return [UIColor colorWithRed:156/255.0f green:43/255.0f blue:43/255.0f alpha:1.0];
 }
 
 //Color of background view in toolBar bar, only for iOS 7 for transparency
 + (UIColor*)colorOfBackgroundToolBarImage {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:0.7];
+    return [UIColor colorWithRed:156/255.0f green:43/255.0f blue:43/255.0f alpha:1.0];
 }
 
 //Tint color of tool bar buttons
@@ -74,7 +74,7 @@
 
 //Tint color for non selected tab bar item (only works with the labels)
 + (UIColor*)colorOfTintNonSelectedUITabBar {
-   return [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0];
+    return [UIColor colorWithRed:0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0];
 }
 
 
@@ -161,7 +161,7 @@
 
 //Color of webview background
 + (UIColor*)colorOfWebViewBackground{
-   return [UIColor colorWithRed:26/255 green:26/255 blue:28/255 alpha:1.0];
+    return [UIColor colorWithRed:26/255 green:26/255 blue:28/255 alpha:1.0];
 }
 
 //Color of background in detail view when there are not file selected

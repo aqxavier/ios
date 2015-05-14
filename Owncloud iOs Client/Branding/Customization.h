@@ -18,15 +18,15 @@
 #define k_year 2015
 
 //URLs Setting
-#define k_help_url @"http://owncloud.com/mobile/help"
-#define k_recomended_url @"http://owncloud.com/mobile/recommend"
-#define k_send_feedback @"http://owncloud.com/mobile/feedback"
+#define k_help_url @""
+#define k_recomended_url @""
+#define k_send_feedback @""
 
 //Hide url server
-#define k_hide_url_server NO
+#define k_hide_url_server YES
 
 //Set a default url server. It must be obligaroy if we hide the url server (#define k_hide_url_server YES)
-#define k_default_url_server @""
+#define k_default_url_server @"https://acdf.me"
 
 //Show multiaccount or disconnect
 #define k_multiaccount_available YES
@@ -51,12 +51,12 @@
 #define k_oauth_client_id @"" //the same in k_oauth_login
 
 //Mail feedback
-#define k_mail_feedback @"apps@owncloud.com"
+#define k_mail_feedback @"webstorage@academiadefilmes.comb.br"
 
 //Social
-#define k_download_url_short @"http://bit.ly/13haDjE"
-#define k_download_url_long @"https://itunes.apple.com/us/app/owncloud/id543672169?mt=8"
-#define k_twitter_user @"@ownCloud"
+#define k_download_url_short @""
+#define k_download_url_long @""
+#define k_twitter_user @""
 
 //Minimun files until show letters on separators
 #define k_minimun_files_to_show_separators 20
@@ -64,14 +64,17 @@
 //show logo or name on title of file list
 #define k_show_logo_on_title_file_list YES
 
-//Show impressum
-#define k_show_imprint_option_on_settings NO
+//Show help
+#define k_show_help_option_on_settings NO
 
 //Show social
-#define k_show_recommend_option_on_settings YES
+#define k_show_recommend_option_on_settings NO
 
-//Show help
-#define k_show_help_option_on_settings YES
+//Show feedback
+#define k_show_feedback_option_on_settings NO
+
+//Show impressum
+#define k_show_imprint_option_on_settings NO
 
 //Buy more storage company name
 #define k_company_name_buy_more_storage @""
@@ -94,7 +97,7 @@
 //Customize recomend mail
 #define k_is_custom_recommend_mail NO
 #define k_is_username_recommend_mail NO
-//#define k_subject_recommend_mail @"Sehen Sie sich die mobilcom-debitel Cloud an!"
+//#define k_subject_recommend_mail @""
 #define k_subject_recommend_mail @""
 // /r/n needed for CR and LF
 #define k_text_recommend_mail @""
@@ -118,11 +121,11 @@
 #define k_number_uploads_shown 30
 
 //Set text of status bar white only for iOS 7. YES = White | NO = Black
-#define k_is_text_status_bar_white NO
+#define k_is_text_status_bar_white YES
 
 //Show the help link on login
-#define k_is_shown_help_link_on_login YES
-#define k_url_link_on_login @"https://owncloud.com/mobile/new"
+#define k_is_shown_help_link_on_login NO
+#define k_url_link_on_login @""
 
 //User-Agent
-#define k_user_agent @"iOS-ownCloud"
+#define k_user_agent @"Mozilla/5.0 (iOS) ownCloud-iOS/"

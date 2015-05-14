@@ -87,8 +87,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
     [super viewDidLoad];
     
     //Enable toolBar and navBar
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
     
     _progressViewHeightConstraint.constant = 2;
     
@@ -316,8 +316,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
     _progressView.progress = 0.0;
     
     //Enable back button
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
     
     DLog(@"finish to clean view");
 }
@@ -590,8 +590,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
 
     
     //Enable back button
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
     
 }
 
@@ -642,8 +642,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
         }
         
         //Enable back button
-        self.navigationController.navigationBar.UserInteractionEnabled = YES;
-        _toolBar.UserInteractionEnabled = YES;
+        self.navigationController.navigationBar.userInteractionEnabled = YES;
+        _toolBar.userInteractionEnabled = YES;
 
 }
 
@@ -713,8 +713,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
     [self.view bringSubviewToFront:_toolBar];
     
     //Enable user interaction
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
 }
 
 #pragma mark - Gallery View Delegate Methods
@@ -1133,8 +1133,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
         _progressView.progress = 0.0;
         
         //Enable back button
-        self.navigationController.navigationBar.UserInteractionEnabled = YES;
-        _toolBar.UserInteractionEnabled = YES;
+        self.navigationController.navigationBar.userInteractionEnabled = YES;
+        _toolBar.userInteractionEnabled = YES;
     }
 }
 
@@ -1359,8 +1359,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
     _progressLabel.hidden = YES;
     
     //Enable back button
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
 }
 
 
@@ -1416,8 +1416,8 @@ NSString * iPhoneShowNotConnectionWithServerMessageNotification = @"iPhoneShowNo
     [self cleanView];
     
     //Enable interaction view
-    self.navigationController.navigationBar.UserInteractionEnabled = YES;
-    _toolBar.UserInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    _toolBar.userInteractionEnabled = YES;
     
     if(string) {
         [self showErrorMessageIfNotIsShowingWithString:string];

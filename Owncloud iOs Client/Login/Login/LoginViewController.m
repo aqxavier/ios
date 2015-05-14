@@ -2304,7 +2304,7 @@ NSString *loginViewControllerRotate = @"loginViewControllerRotate";
         
         //We check the problematic characters before login
         //if([self isProblematicCharactersOnPassword:passwordTxtField.text]) {
-        if(NO) {
+        if(/* DISABLES CODE */ (NO)) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"forbidden_characters", nil)
                                                             message:@"" delegate:nil cancelButtonTitle:NSLocalizedString(@"ok", nil) otherButtonTitles:nil, nil];
             [alert show];
