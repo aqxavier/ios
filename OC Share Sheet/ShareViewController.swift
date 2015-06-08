@@ -472,7 +472,7 @@ import AVFoundation
         return false
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         println("row = %d",indexPath.row)
     }

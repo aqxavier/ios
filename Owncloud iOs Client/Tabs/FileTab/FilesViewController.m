@@ -121,8 +121,9 @@
     
     _currentRemoteFolder = currentFolder;
     _currentLocalFolder = currentLocalFoler;
-    DLog(@"self.fileIdToShowFiles: %@", _fileIdToShowFiles.etag);
-    DLog(@"self.fileIdToShowFiles: %ld", (long)_fileIdToShowFiles.idFile);
+
+   // DLog(@"self.fileIdToShowFiles: %lld", _fileIdToShowFiles.etag);
+  //  DLog(@"self.fileIdToShowFiles: %ld", (long)_fileIdToShowFiles.idFile);
     
     _showLoadingAfterChangeUser = NO;
     _checkingEtag = NO;
