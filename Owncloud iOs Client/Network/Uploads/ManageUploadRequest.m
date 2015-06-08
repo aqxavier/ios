@@ -32,6 +32,7 @@
 #import "UtilsDtos.h"
 #import "OCURLSessionManager.h"
 #import "ManageAppSettingsDB.h"
+#import "UtilsCookies.h"
 
 NSString *fileDeleteInAOverwriteProcess=@"fileDeleteInAOverwriteProcess";
 NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
@@ -175,7 +176,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         [[AppDelegate sharedOCCommunication] setCredentialsWithUser:app.activeUser.username andPassword:app.activeUser.password];
     }
     
-    [[AppDelegate sharedOCCommunication] setUserAgent:k_user_agent];
+    [[AppDelegate sharedOCCommunication] setUserAgent:[UtilsUrls getUserAgent]];
     
     [[AppDelegate sharedOCCommunication] createFolder:pathRemoteFolder onCommunication:[AppDelegate sharedOCCommunication] successRequest:^(NSHTTPURLResponse *response, NSString *redirectedServer) {
         DLog(@"Folder created");
@@ -244,7 +245,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         [[AppDelegate sharedOCCommunication] setCredentialsWithUser:_userUploading.username andPassword:_userUploading.password];
     }
     
-    [[AppDelegate sharedOCCommunication] setUserAgent:k_user_agent];
+    [[AppDelegate sharedOCCommunication] setUserAgent:[UtilsUrls getUserAgent]];
     
     NSString *urlClean = [NSString stringWithFormat:@"%@%@", _currentUpload.destinyFolder, _currentUpload.uploadFileName];
     urlClean = [urlClean stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -779,7 +780,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
     [self updateRecentsTab];
 
     //Clear cache and cookies
-    [app eraseURLCache];
+    [UtilsCookies eraseURLCache];
 }
 
 
@@ -932,7 +933,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         [[AppDelegate sharedOCCommunication] setCredentialsWithUser:self.userUploading.username andPassword:self.userUploading.password];
     }
     
-    [[AppDelegate sharedOCCommunication] setUserAgent:k_user_agent];
+    [[AppDelegate sharedOCCommunication] setUserAgent:[UtilsUrls getUserAgent]];
     
     //FileName full path
     NSString *serverPath = [NSString stringWithFormat:@"%@%@", self.userUploading.url, k_url_webdav_server];
@@ -994,7 +995,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         
     }];
     //Erase cache and cookies
-    [weakSelf eraseURLCache];
+    [UtilsCookies eraseURLCache];
 }
 
 // Check the etag in the case that in the server has changed
@@ -1010,7 +1011,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         [[AppDelegate sharedOCCommunication] setCredentialsWithUser:self.userUploading.username andPassword:self.userUploading.password];
     }
     
-    [[AppDelegate sharedOCCommunication] setUserAgent:k_user_agent];
+    [[AppDelegate sharedOCCommunication] setUserAgent:[UtilsUrls getUserAgent]];
     
     //FileName full path
     NSString *serverPath = [NSString stringWithFormat:@"%@%@", self.userUploading.url, k_url_webdav_server];
@@ -1078,23 +1079,7 @@ NSString *uploadOverwriteFileNotification=@"uploadOverwriteFileNotification";
         
     }];
     //Erase cache and cookies
-    [weakSelf eraseURLCache];
+    [UtilsCookies eraseURLCache];
 }
-
-
-///-----------------------------------
-/// @name Erase URL Cache
-///-----------------------------------
-
-/**
- * Method that clear the URL cache
- *
- */
-- (void)eraseURLCache
-{
-    [[NSURLCache sharedURLCache] setMemoryCapacity:0];
-    [[NSURLCache sharedURLCache] setDiskCapacity:0];
-}
-
 
 @end
